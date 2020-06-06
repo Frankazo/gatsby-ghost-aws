@@ -1,3 +1,64 @@
+# Application Title: Blog site using Ghost cms, Gatsby and Amazon Amplify
+
+This application allows the user to do x, y, and z. Maybe here's a reason why I
+wanted to do this project, or came up with this idea.
+
+## Setup Steps
+
+1. [deploying](https://medium.com/swlh/deploy-an-independent-blog-using-gatsby-js-ghost-and-aws-amplify-713577af0fde)
+1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone) this repository.
+1. Run `install command` to install all dependencies
+1. Use `start command` to spin up the server.
+
+## Important Links
+
+- [Other Repo](www.link.com)
+- [Deployed API](www.link.com)
+- [Deployed Client](www.link.com)
+
+## Planning Story
+
+Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin coffee williamsburg af poutine fingerstache austin semiotics paleo man braid vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats shoreditch try-hard health goth intelligentsia pop-up small batch skateboard farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle tofu.
+
+### User Stories
+
+- As a user I want to sign in/up
+- As a user I want to Create a new < resource >
+- As a user I want to Read multiple < resources >
+- As a user I want to Read a single < resource >
+- As a user I want to Update a < resource > I own
+- As a user I want to Delete a < resource > I own
+
+### Technologies Used
+
+- React.js
+- Ghost CMS
+- Gatsby
+- HTML/CSS
+- Bootstrap
+- Javascript
+
+
+### Unsolved Problems
+
+- Still need to ....
+- Would like to eventually ....
+
+## Images
+
+#### App Screenshot:
+![screenshot](https://media.idownloadblog.com/wp-content/uploads/2017/07/Select-Instagram-story-to-save-to-iPhone.jpeg)
+
+---
+
+#### Wireframe:
+![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
+
+---
+
+#### ERD:
+![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)
+
 # Gatsby Starter Ghost
 
 A starter template to build lightning fast websites with [Ghost](https://ghost.org) & [Gatsby](https://gatsbyjs.org)
@@ -66,28 +127,6 @@ The default Ghost version that is used for this starter is `3.x`. If your Ghost 
     "contentApiKey": "9cc5c67c358edfdd81455149d0"
 }
 ```
-
-&nbsp;
-
-# Deploying with Netlify
-
-The starter contains three config files specifically for deploying with Netlify. A `netlify.toml` file for build settings, a `/static/_headers` file with default security headers set for all routes, and `/static/_redirects` to set Netlify custom domain redirects.
-
-To deploy to your Netlify account, hit the button below.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TryGhost/gatsby-starter-ghost)
-
-Content API Keys are generally not considered to be sensitive information, they exist so that they can be changed in the event of abuse; so most people commit it directly to their `.ghost.json` config file. If you prefer to keep this information out of your repository you can remove this config and set [Netlify ENV variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables) for production builds instead.
-
-Once deployed, you can set up a [Ghost + Netlify Integration](https://docs.ghost.org/integrations/netlify/) to use deploy hooks from Ghost to trigger Netlify rebuilds. That way, any time data changes in Ghost, your site will rebuild on Netlify.
-
-&nbsp;
-
-# Optimising
-
-You can disable the default Ghost Handlebars Theme front-end by enabling the `Make this site private` flag within your Ghost settings. This enables password protection in front of the Ghost install and sets `<meta name="robots" content="noindex" />` so your Gatsby front-end becomes the source of truth for SEO.
-
-&nbsp;
 
 # Extra options
 
