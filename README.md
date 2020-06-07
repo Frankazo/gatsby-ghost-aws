@@ -18,7 +18,9 @@ wanted to do this project, or came up with this idea.
 
 ## Planning Story
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin coffee williamsburg af poutine fingerstache austin semiotics paleo man braid vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats shoreditch try-hard health goth intelligentsia pop-up small batch skateboard farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle tofu.
+I'm building blog for my wife, in the process of searching for the best way to do it I came across Ghost cms(link), which is a really awesome CMS, but I didn't wanted to use any of the theme because I wanted to create my own, so i decide to keep searching and realice I can use Gatsby as a front end and Ghost as a headless cms, this is marvelous because I can style my Front end as much as a like, make it fast and secure with gastby and allow my wife to publish her content without any coding or hassle.  
+
+Succesfully created a webhook that triggers a build in Amazon amplify directly from updating the ghost cms.
 
 ### User Stories
 

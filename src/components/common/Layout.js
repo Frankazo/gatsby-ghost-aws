@@ -2,14 +2,40 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { Link, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 
 import { Navigation } from '.'
 import config from '../../utils/siteConfig'
 
 // Styles
 import '../../styles/app.css'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import styled from 'styled-components'
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 10vh;
+  justify-content: space-between;
+  height: 35vh;
+  width: 65vh;
+`
+const AuthorImg = styled.figure`
+  margin-bottom: 10px;
+  img{
+      border-radius: 50%;
+      border: 15px solid #fff;
+      box-shadow: -14.142px -14.142px 40px 0px rgb( 255, 255, 255 );
+  }
+  div{
+      border-radius: 50%;
+      background-color: rgb( 255, 255, 255 );
+  }
+`
+// {/* <div className="site-banner">
+//     <h1 className="site-banner-title">{site.title}</h1>
+//     <p className="site-banner-desc">{site.description}</p>
+// </div>*/}
 /**
 * Main layout component
 *
@@ -35,17 +61,28 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
-                    <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}>
+                    {/* <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}> */}
+                    <header className="site-head" style={{ backgroundColor: `#eb98e8` }}>
                         <div className="container">
                             <div className="site-mast">
                                 <div className="site-mast-left">
                                     <Link to="/">
-                                        {site.logo ?
+                                        {/*{site.logo ?
                                             <img className="site-logo" src={site.logo} alt={site.title} />
                                             : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                                        }
+                                        }*/}
+                                        <h2 style={{ color: `#fff` }}>My Source Of Love</h2>
                                     </Link>
                                 </div>
+                                <nav className="site-nav">
+                                    <div className="site-nav-left">
+                                        {/* The navigation items as setup in Ghost */}
+                                        <Navigation data={site.navigation} navClass="site-nav-item" />
+                                    </div>
+                                    <div className="site-nav-right">
+                                        <Link className="site-nav-button" to="/about">About</Link>
+                                    </div>
+                                </nav>
                                 <div className="site-mast-right">
                                     { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
                                     { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
@@ -53,20 +90,25 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </div>
                             </div>
                             { isHome ?
-                                <div className="site-banner">
-                                    <h1 className="site-banner-title">{site.title}</h1>
-                                    <p className="site-banner-desc">{site.description}</p>
-                                </div> :
-                                null}
-                            <nav className="site-nav">
-                                <div className="site-nav-left">
-                                    {/* The navigation items as setup in Ghost */}
-                                    <Navigation data={site.navigation} navClass="site-nav-item" />
-                                </div>
-                                <div className="site-nav-right">
-                                    <Link className="site-nav-button" to="/about">About</Link>
-                                </div>
-                            </nav>
+                                (<Jumbotron style={{ padding: `100px 0 100px 0`, height: `auto`, display: `flex`, alignItems: `center`, justifyContent: `center`, flexWrap: `wrap` }}
+                                >
+                                    <AuthorImg>
+                                        <img src={require(`../../author-2.jpg`)} alt="Author Image"/>
+                                    </AuthorImg>
+                                    <Container>
+                                        <div>
+                                            <h1 style={{ color: `#ffffff`, margin: `0` }}>Author Name</h1>
+                                            <p style={{ color: `#ffffff` }}>description</p>
+                                        </div>
+                                        <p style={{ color: `#ffffff` }}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                        <p style={{ color: `#ffffff` }}>
+                                      icon icon icon icon
+                                        </p>
+                                    </Container>
+                                </Jumbotron>)
+                                : null }
                         </div>
                     </header>
 

@@ -1,7 +1,7 @@
 {
   "development": {
-    "apiUrl": "http://localhost:2368",
-    "contentApiKey": "0cdcc2199cca5274c5b133392d"
+    "apiUrl": "https://editor.mysourceoflove.com",
+    "contentApiKey": "12a4e6d2a349845fb619945668"
   },
   "production": {
     "apiUrl": "https://editor.mysourceoflove.com",
