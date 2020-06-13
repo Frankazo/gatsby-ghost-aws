@@ -21,7 +21,8 @@ const Container = styled.div`
   width: 65vh;
 `
 const AuthorImg = styled.figure`
-  margin-bottom: 10px;
+  margin-top: 75px;
+  margin-bottom: 75px;
   img{
       border-radius: 50%;
       border: 15px solid #fff;
@@ -62,8 +63,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                 <div className="viewport-top">
                     {/* The main header section on top of the screen */}
                     {/* <header className="site-head" style={{ ...site.cover_image && { backgroundImage: `url(${site.cover_image})` } }}> */}
-                    <header className="site-head" style={{ backgroundColor: `#eb98e8` }}>
-                        <div className="container">
+                    <header className="site-head" style={{ backgroundColor: `#fff` }}>
+                        <div className="container" style={{ paddingBottom: `20px` }}>
                             <div className="site-mast">
                                 <div className="site-mast-left">
                                     <Link to="/">
@@ -71,7 +72,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             <img className="site-logo" src={site.logo} alt={site.title} />
                                             : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
                                         }*/}
-                                        <h2 style={{ color: `#fff` }}>My Source Of Love</h2>
+                                        <h2 style={{ color: `#000` }}>My Source Of Love</h2>
                                     </Link>
                                 </div>
                                 <nav className="site-nav">
@@ -80,7 +81,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         <Navigation data={site.navigation} navClass="site-nav-item" />
                                     </div>
                                     <div className="site-nav-right">
-                                        <Link className="site-nav-button" to="/about">About</Link>
+                                        <Link style={{ color: `#000` }} className="site-nav-item" to="/about">About</Link>
                                     </div>
                                 </nav>
                                 <div className="site-mast-right">
@@ -89,6 +90,8 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
                                 </div>
                             </div>
+                        </div>
+                        <div style={{ backgroundColor: `#dd8df7` }} >
                             { isHome ?
                                 (<Jumbotron style={{ padding: `100px 0 100px 0`, height: `auto`, display: `flex`, alignItems: `center`, justifyContent: `center`, flexWrap: `wrap` }}
                                 >
@@ -103,9 +106,11 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         <p style={{ color: `#ffffff` }}>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                         </p>
-                                        <p style={{ color: `#ffffff` }}>
-                                      icon icon icon icon
-                                        </p>
+                                        <div className="site-mast-right">
+                                            { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
+                                            { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
+                                            <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
+                                        </div>
                                     </Container>
                                 </Jumbotron>)
                                 : null }
@@ -114,6 +119,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
+                        <div>
+                            <h2 className="container">Projects</h2>
+                        </div>
                         {children}
                     </main>
 
