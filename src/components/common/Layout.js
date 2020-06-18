@@ -38,10 +38,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
 
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
-                        <div>
-                            <h2 className="container">Portfolio</h2>
-                            <Portfolio />
-                        </div>
+                        { isHome ?
+                            (<div>
+                                <h2 className="container">Portfolio</h2>
+                                <Portfolio />
+                            </div>)
+                            : null }
+
                         {children}
                     </main>
 
