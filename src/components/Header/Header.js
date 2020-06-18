@@ -13,10 +13,6 @@ const Nav = ({ data }) => {
             <div className="site-mast">
                 <div className="site-mast-left">
                     <Link to="/">
-                        {/*{site.logo ?
-                            <img className="site-logo" src={site.logo} alt={site.title} />
-                            : <Img fixed={data.file.childImageSharp.fixed} alt={site.title} />
-                        }*/}
                         <h2 style={{ color: `#000` }}>My Source Of Love</h2>
                     </Link>
                 </div>
@@ -26,7 +22,6 @@ const Nav = ({ data }) => {
                         <Navigation data={site.navigation} navClass="site-nav-item" />
                     </div>
                     <div className="site-nav-right">
-                        <Link style={{ color: `#000` }} className="site-nav-item" to="/about">About</Link>
                     </div>
                 </nav>
                 <div className="site-mast-right">

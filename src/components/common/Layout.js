@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { Link, StaticQuery, graphql } from 'gatsby'
-import { Navigation } from '.'
+import { StaticQuery, graphql } from 'gatsby'
 
 // Styles
 import '../../styles/app.css'
@@ -11,6 +10,7 @@ import '../../styles/app.css'
 import Jumbo from '../Jumbotron/Jumbotron'
 import Portfolio from '../portfolio/Portfolio'
 import Nav from '../Header/Header'
+import Footer from '../Footer/Footer'
 
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node
@@ -44,26 +44,19 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 <Portfolio />
                             </div>)
                             : null }
+                        { isHome ?
+                            (<div>
+                                <h2 className="container">Recent Post</h2>
+                                {children}
+                            </div>)
+                            : <div> {children} </div>}
 
-                        {children}
                     </main>
 
                 </div>
-
-                <div className="viewport-bottom">
-                    {/* The footer at the very bottom of the screen */}
-                    <footer className="site-foot">
-                        <div className="site-foot-nav container">
-                            <div className="site-foot-nav-left">
-                                <Link to="/">{site.title}</Link> © 2019 &mdash; Published with <a className="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">Ghost</a>
-                            </div>
-                            <div className="site-foot-nav-right">
-                                <Navigation data={site.navigation} navClass="site-foot-nav-item" />
-                            </div>
-                        </div>
-                    </footer>
-
-                </div>
+                <Footer
+                    data={data}
+                />
             </div>
 
         </>
