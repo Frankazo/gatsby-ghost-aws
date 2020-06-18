@@ -9,7 +9,7 @@ import '../../styles/app.css'
 
 //custom components
 import Jumbo from '../Jumbotron/Jumbotron'
-import Carousel from '../portfolio/Carousel'
+import Portfolio from '../portfolio/Portfolio'
 import Nav from '../Header/Header'
 
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
@@ -29,20 +29,18 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                         <Nav
                             data={data}
                         />
-                        <div>
-                            { isHome ?
-                                (<Jumbo
-                                    data={data}
-                                />)
-                                : null }
-                        </div>
+                        { isHome ?
+                            (<Jumbo
+                                data={data}
+                            />)
+                            : null }
                     </header>
 
                     <main className="site-main">
                         {/* All the main content gets inserted here, index.js, post.js */}
                         <div>
-                            <h2 className="container">Projects</h2>
-                            <Carousel />
+                            <h2 className="container">Portfolio</h2>
+                            <Portfolio />
                         </div>
                         {children}
                     </main>
