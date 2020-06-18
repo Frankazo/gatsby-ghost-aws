@@ -12,6 +12,16 @@ import '../../styles/app.css'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import styled from 'styled-components'
 
+const MyJumbotron = styled(Jumbotron)`
+  background: linear-gradient(0deg, rgba(224,168,238,0.773546918767507) 0%, rgba(222,160,238,0.8211659663865546) 100%);
+  padding: 100px 0 100px 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -91,10 +101,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{ backgroundColor: `#dd8df7` }} >
+                        <div>
                             { isHome ?
-                                (<Jumbotron style={{ padding: `100px 0 100px 0`, height: `auto`, display: `flex`, alignItems: `center`, justifyContent: `center`, flexWrap: `wrap` }}
-                                >
+                                (<MyJumbotron>
                                     <AuthorImg>
                                         <img src={require(`../../author-2.jpg`)} alt="Author Image"/>
                                     </AuthorImg>
@@ -112,7 +121,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
                                         </div>
                                     </Container>
-                                </Jumbotron>)
+                                </MyJumbotron>)
                                 : null }
                         </div>
                     </header>
