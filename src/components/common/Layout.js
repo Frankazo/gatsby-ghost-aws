@@ -46,13 +46,16 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             : null }
                         { isHome ?
                             (<div>
-                                <h2 className="container">Recent Post</h2>
+                                <h2
+                                    style={{ marginBottom: `10px` }}
+                                    className="container"
+                                >
+                                Recent Post
+                                </h2>
                                 {children}
                             </div>)
                             : <div> {children} </div>}
-
                     </main>
-
                 </div>
                 <Footer
                     data={data}

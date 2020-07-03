@@ -3,24 +3,37 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { Tags } from '@tryghost/helpers-gatsby'
 import { readingTime as readingTimeHelper } from '@tryghost/helpers'
+import styled from 'styled-components'
+
+const MyPostcard = styled(Link)`
+    display: flex;
+    flex-direction: row;
+
+`
 
 const PostCard = ({ post }) => {
     const url = `/${post.slug}/`
     const readingTime = readingTimeHelper(post)
 
     return (
-        <Link to={url} className="post-card">
+        <MyPostcard to={url} className="post-card">
             <header className="post-card-header">
-                {post.feature_image &&
-                    <div className="post-card-image" style={{
-                        backgroundImage: `url(${post.feature_image})` ,
-                    }}></div>}
+                <div>
+                    {post.feature_image &&
+                        <div className="post-card-image" style={{
+                            backgroundImage: `url(${post.feature_image})` ,
+                        }}></div>}
+                </div>
                 {post.tags && <div className="post-card-tags"> <Tags post={post} visibility="public" autolink={false} /></div>}
                 {post.featured && <span>Featured</span>}
-                <h2 className="post-card-title">{post.title}</h2>
+
             </header>
-            <section className="post-card-excerpt">{post.excerpt}</section>
-            <footer className="post-card-footer">
+            <div style={{ marginLeft: `20px` }} >
+                <h2 className="post-card-title">{post.title}</h2>
+                <section className="post-card-excerpt">{post.excerpt}</section>
+                <div>{readingTime}</div>
+            </div>
+            {/*<footer className="post-card-footer">
                 <div className="post-card-footer-left">
                     <div className="post-card-avatar">
                         {post.primary_author.profile_image ?
@@ -33,8 +46,8 @@ const PostCard = ({ post }) => {
                 <div className="post-card-footer-right">
                     <div>{readingTime}</div>
                 </div>
-            </footer>
-        </Link>
+            </footer>*/}
+        </MyPostcard>
     )
 }
 

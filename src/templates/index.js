@@ -5,6 +5,13 @@ import { graphql } from 'gatsby'
 import { Layout, PostCard, Pagination } from '../components/common'
 import { MetaData } from '../components/common/meta'
 
+import styled from 'styled-components'
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin: 0 30vh 0 30vh;
+`
 /**
 * Main index page (home page)
 *
@@ -20,13 +27,13 @@ const Index = ({ data, location, pageContext }) => {
         <>
             <MetaData location={location} />
             <Layout isHome={true}>
-                <div className="container">
-                    <section className="post-feed">
+                <div>
+                    <Section>
                         {posts.map(({ node }) => (
                             // The tag below includes the markup for each post - components/common/PostCard.js
                             <PostCard key={node.id} post={node} />
                         ))}
-                    </section>
+                    </Section>
                     <Pagination pageContext={pageContext} />
                 </div>
             </Layout>
