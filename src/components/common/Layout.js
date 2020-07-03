@@ -25,7 +25,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
             <div className="viewport">
 
                 <div className="viewport-top">
-                    <header className="site-head" style={{ backgroundColor: `#fff` }}>
+                    <header
+                        className="site-head"
+                        style={isHome ? ({ backgroundColor: `#fff` }) : ({ backgroundColor: `rgba(224,168,238,0.773546918767507)` })}>
                         <Nav
                             data={data}
                         />
