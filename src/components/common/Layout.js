@@ -28,18 +28,14 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <header
                         className="site-head"
                         style={isHome ? ({ backgroundColor: `#fff` }) : ({ backgroundColor: `rgba(224,168,238,0.773546918767507)` })}>
-                        <Nav
+                        <Jumbo
                             data={data}
                         />
-                        { isHome ?
-                            (<Jumbo
-                                data={data}
-                            />)
-                            : null }
                     </header>
 
-                    <main className="site-main">
-                        {/* All the main content gets inserted here, index.js, post.js */}
+                   {/*
+                   <main className="site-main">
+                         All the main content gets inserted here, index.js, post.js 
                         { isHome ?
                             (<div>
                                 <h2 className="container">Portfolio</h2>
@@ -58,10 +54,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                             </div>)
                             : <div> {children} </div>}
                     </main>
+                     */}
                 </div>
+                 {/*
                 <Footer
                     data={data}
-                />
+                /> 
+                */}
             </div>
 
         </>

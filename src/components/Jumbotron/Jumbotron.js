@@ -4,10 +4,11 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import styled from 'styled-components'
 import config from '../../utils/siteConfig'
 
+
 const MyJumbotron = styled(Jumbotron)`
   background: linear-gradient(0deg, rgba(224,168,238,0.773546918767507) 0%, rgba(222,160,238,0.8211659663865546) 100%);
   padding: 100px 0 100px 0;
-  height: auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,16 +47,23 @@ const Jumbo = ({ data }) => {
             </AuthorImg>
             <Container>
                 <div>
-                    <h1 style={{ color: `#ffffff`, margin: `0` }}>Author Name</h1>
-                    <p style={{ color: `#ffffff` }}>description</p>
+                    <h1 style={{ color: `#ffffff`, margin: `0` }}>My Source of Love</h1>
+                    <p style={{ color: `#ffffff` }}>By Helly Dayana</p>
                 </div>
                 <p style={{ color: `#ffffff` }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        A full portfolio site it's been develop, in the mean time please check out my social networks and my photos!!
                 </p>
                 <div className="site-mast-right">
-                    { site.twitter && <a href={ twitterUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/twitter.svg" alt="Twitter" /></a>}
-                    { site.facebook && <a href={ facebookUrl } className="site-nav-item" target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/facebook.svg" alt="Facebook" /></a>}
-                    <a className="site-nav-item" href={ `https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/` } target="_blank" rel="noopener noreferrer"><img className="site-nav-icon" src="/images/icons/rss.svg" alt="RSS Feed" /></a>
+                    <a href="https://www.instagram.com/mysourceoflove/" target='_blank'><img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/instagram.svg')} alt="Instagram Icon" />
+                    </a>
+                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/facebook.svg')} alt="Facebook Icon" /> */}
+
+                    <a href="https://twitter.com/hellyydaya" target='_blank'><img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/twitter.svg')} alt="Twitter Icon" />
+                    </a>
+
+                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/youtube.svg')} alt="Youtube Icon" /> */}
+
+                    <a href="mailto: frankluisravlo@gmail.com"><img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/envelope.svg')} alt="Email Icon" /></a>
                 </div>
             </Container>
         </MyJumbotron>
