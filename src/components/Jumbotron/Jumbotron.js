@@ -18,7 +18,7 @@ const MyJumbotron = styled(Jumbotron)`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 10vh;
+  margin-left: 10%;
   justify-content: space-between;
   height: 35vh;
   width: 65vh;
@@ -46,24 +46,24 @@ const Jumbo = ({ data }) => {
                 <img src={require(`../../author-2.jpg`)} alt="Author Image"/>
             </AuthorImg>
             <Container>
-                <div>
-                    <h1 style={{ color: `#ffffff`, margin: `0` }}>My Source of Love</h1>
-                    <p style={{ color: `#ffffff` }}>By Helly Dayana</p>
+                <div className="site-mast-right">
+                    <h1 style={{ color: `#ffffff`, margin: `0`, fontSize: `4em` }}>My Source of Love</h1>
                 </div>
+                    <p style={{ color: `#ffffff` }}>By Helly Dayana</p>
                 <p style={{ color: `#ffffff` }}>
         A full portfolio site it's been develop, in the mean time please check out my social networks and my photos!!
                 </p>
                 <div className="site-mast-right">
-                    <a href="https://www.instagram.com/mysourceoflove/" target='_blank'><img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/instagram.svg')} alt="Instagram Icon" />
+                    <a href="https://www.instagram.com/mysourceoflove/" target='_blank'><img style={{ width: '75px', height: '75px' }} src={require('../../images/instagram.svg')} alt="Instagram Icon" />
                     </a>
-                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/facebook.svg')} alt="Facebook Icon" /> */}
+                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '20px' }} src={require('../../images/facebook.svg')} alt="Facebook Icon" /> */}
 
-                    <a href="https://twitter.com/hellyydaya" target='_blank'><img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/twitter.svg')} alt="Twitter Icon" />
+                    <a href="https://twitter.com/hellyydaya" target='_blank'><img style={{ width: '75px', height: '75px', marginLeft: '15px' }} src={require('../../images/twitter.svg')} alt="Twitter Icon" />
                     </a>
 
-                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/youtube.svg')} alt="Youtube Icon" /> */}
+                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '20px' }} src={require('../../images/youtube.svg')} alt="Youtube Icon" /> */}
 
-                    <a href="mailto: frankluisravlo@gmail.com"><img style={{ width: '75px', height: '75px', marginLeft: '10px' }} src={require('../../images/envelope.svg')} alt="Email Icon" /></a>
+                    <a href="mailto: frankluisravlo@gmail.com"><img style={{ width: '75px', height: '75px', marginLeft: '15px' }} src={require('../../images/envelope.svg')} alt="Email Icon" /></a>
                 </div>
             </Container>
         </MyJumbotron>

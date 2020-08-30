@@ -698,6 +698,7 @@ h6 {
 .site-mast-right {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .site-mast-right .site-nav-item:last-child {
