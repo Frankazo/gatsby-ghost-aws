@@ -4,9 +4,15 @@ import Jumbotron from 'react-bootstrap/Jumbotron'
 import styled from 'styled-components'
 import config from '../../utils/siteConfig'
 
+const MyTitle = styled.h1`
+    color: #000000; 
+    margin: 0;
+    font-size: 4em;
+    font-family: 'Dancing Script', cursive;
+`
 
 const MyJumbotron = styled(Jumbotron)`
-  background: linear-gradient(0deg, rgba(224,168,238,0.773546918767507) 0%, rgba(222,160,238,0.8211659663865546) 100%);
+  background: #f6f2ff;
   padding: 100px 0 100px 0;
   height: 100vh;
   display: flex;
@@ -47,11 +53,13 @@ const Jumbo = ({ data }) => {
             </AuthorImg>
             <Container>
                 <div className="site-mast-right">
-                    <h1 style={{ color: `#ffffff`, margin: `0`, fontSize: `4em` }}>My Source of Love</h1>
+                    <MyTitle>My Source of Love</MyTitle>
                 </div>
-                    <p style={{ color: `#ffffff` }}>By Helly Dayana</p>
-                <p style={{ color: `#ffffff` }}>
-        A full portfolio site it's been develop, in the mean time please check out my social networks and my photos!!
+                    <p style={{ color: `#000000` }}>By Helly Dayana</p>
+                <p style={{ color: `#000000` }}>
+                    A full portfolio site it's been develop, in the mean time please check out my social networks and my photos!!
+                    <br></br>
+                    Make sure to check my portfolio <a href="https://picti.net/WSjiC" target='_blank'>here</a>
                 </p>
                 <div className="site-mast-right">
                     <a href="https://www.instagram.com/mysourceoflove/" target='_blank'><img style={{ width: '75px', height: '75px' }} src={require('../../images/instagram.svg')} alt="Instagram Icon" />
@@ -63,7 +71,7 @@ const Jumbo = ({ data }) => {
 
                     {/* <img style={{ width: '75px', height: '75px', marginLeft: '20px' }} src={require('../../images/youtube.svg')} alt="Youtube Icon" /> */}
 
-                    <a href="mailto: frankluisravlo@gmail.com"><img style={{ width: '75px', height: '75px', marginLeft: '15px' }} src={require('../../images/envelope.svg')} alt="Email Icon" /></a>
+                    <a href="mailto: HellyDayana@sourceoflove.com"><img style={{ width: '75px', height: '75px', marginLeft: '15px' }} src={require('../../images/envelope.svg')} alt="Email Icon" /></a>
                 </div>
             </Container>
         </MyJumbotron>
