@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import styled from 'styled-components'
-import config from '../../utils/siteConfig'
+// import config from '../../utils/siteConfig'
 
 const MyTitle = styled.h1`
     color: #000000; 
@@ -42,10 +42,10 @@ const AuthorImg = styled.figure`
       background-color: rgb( 255, 255, 255 );
   }
 `
-const Jumbo = ({ data }) => {
-    const site = data.allGhostSettings.edges[0].node
-    const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
-    const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
+const Jumbo = () => {
+    // const site = data.allGhostSettings.edges[0].node
+    // const twitterUrl = site.twitter ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}` : null
+    // const facebookUrl = site.facebook ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}` : null
     return (
         <MyJumbotron>
             <AuthorImg>
@@ -55,23 +55,22 @@ const Jumbo = ({ data }) => {
                 <div className="site-mast-right">
                     <MyTitle>My Source of Love</MyTitle>
                 </div>
-                    <p style={{ color: `#000000` }}>By Helly Dayana</p>
+                <p style={{ color: `#000000` }}>By Helly Dayana</p>
                 <p style={{ color: `#000000` }}>
-                    A full portfolio site it's been develop, in the mean time please check out my social networks and my photos!!
+                    A full portfolio site its been develop, in the mean time please check out my social networks and my photos!!
                     <br></br>
-                    Make sure to check my portfolio <a href="https://picti.net/WSjiC" target='_blank'>here</a>
+                    Make sure to check my portfolio <a href="https://picti.net/WSjiC" target="_blank" rel="noreferrer">here</a>
                 </p>
                 <div className="site-mast-right">
-                    <a href="https://www.instagram.com/mysourceoflove/" target='_blank'><img style={{ width: '75px', height: '75px' }} src={require('../../images/instagram.svg')} alt="Instagram Icon" />
+                    <a href="https://www.instagram.com/mysourceoflove/" target="_blank" rel="noreferrer"><img style={{ width: `75px`, height: `75px` }} src={require(`../../images/instagram.svg`)} alt="Instagram Icon" />
                     </a>
-                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '20px' }} src={require('../../images/facebook.svg')} alt="Facebook Icon" /> */}
-
-                    <a href="https://twitter.com/hellyydaya" target='_blank'><img style={{ width: '75px', height: '75px', marginLeft: '15px' }} src={require('../../images/twitter.svg')} alt="Twitter Icon" />
+                    <a href="https://www.facebook.com/mysourceoflove/" target="_blank" rel="noreferrer"><img style={{ width: `75px`, height: `75px`, marginLeft: `15px` }} src={require(`../../images/facebook.svg`)} alt="Facebook Icon" />
                     </a>
-
-                    {/* <img style={{ width: '75px', height: '75px', marginLeft: '20px' }} src={require('../../images/youtube.svg')} alt="Youtube Icon" /> */}
-
-                    <a href="mailto: HellyDayana@sourceoflove.com"><img style={{ width: '75px', height: '75px', marginLeft: '15px' }} src={require('../../images/envelope.svg')} alt="Email Icon" /></a>
+                    <a href="https://twitter.com/hellyydaya" target="_blank" rel="noreferrer"><img style={{ width: `75px`, height: `75px`, marginLeft: `15px` }} src={require(`../../images/twitter.svg`)} alt="Twitter Icon" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCQK5tCDg6zGWBsmaEn1Gu7Q" target="_blank" rel="noreferrer"><img style={{ width: `75px`, height: `75px`, marginLeft: `15px` }} src={require(`../../images/youtube.svg`)} alt="Youtube Icon" />
+                    </a>
+                    <a href="mailto: HellyDayana@sourceoflove.com"><img style={{ width: `75px`, height: `75px`, marginLeft: `15px` }} src={require(`../../images/envelope.svg`)} alt="Email Icon" /></a>
                 </div>
             </Container>
         </MyJumbotron>
